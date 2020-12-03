@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/01-javase/01-javase.iml" filepath="$PROJECT_DIR$/01-javase/01-javase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/02-maven/02-maven.iml" filepath="$PROJECT_DIR$/02-maven/02-maven.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03-spring-initializr/03-spring-initializr.iml" filepath="$PROJECT_DIR$/03-spring-initializr/03-spring-initializr.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/GitCGBIII2009Projects.iml" filepath="$PROJECT_DIR$/.idea/GitCGBIII2009Projects.iml" />
+    </modules>
+  </component>
+</project>

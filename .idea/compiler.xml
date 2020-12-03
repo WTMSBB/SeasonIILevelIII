@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="09-springboot-webmvc" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="02-maven" target="1.5" />
+      <module name="02-maven (2) (org.example)" target="1.5" />
+      <module name="03-spring-init" target="1.8" />
+      <module name="03-spring-initializr" target="1.8" />
+      <module name="04-springboot-start" target="1.8" />
+      <module name="05-springboot-features" target="1.8" />
+      <module name="06-springboot-dependency-injection" target="1.8" />
+      <module name="07-springboot-hikaricp" target="1.8" />
+      <module name="08-springboot-mybatis" target="1.8" />
+      <module name="09-springboot-webmvc" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="03-spring-init" options="-parameters" />
+      <module name="04-springboot-start" options="-parameters" />
+      <module name="05-springboot-features" options="-parameters" />
+      <module name="06-springboot-dependency-injection" options="-parameters" />
+      <module name="07-springboot-hikaricp" options="-parameters" />
+      <module name="08-springboot-mybatis" options="-parameters" />
+      <module name="09-springboot-webmvc" options="-parameters" />
+    </option>
+  </component>
+</project>
