@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cy.pj.goods.dao.GoodsDao">
+    <select id="findGoods" resultType="com.cy.pj.goods.pojo.Goods">
+        select * from tb_goods
+    </select>
+
+    <delete id="deleteByIds" >
+        DELETE FROM tb_goods
+        <where>
+        <if test="ids!=null and ids.length>0">
+            ID IN
+        <foreach collection="ids" item="id" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+        </if>
+            or 1=2
+        </where>
+    </delete>
+</mapper>
