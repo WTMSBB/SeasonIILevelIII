@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME WORKKKKKK!!!!!!</title>
+</head>
+<body>
+    <h1>THIS SCHOOL IS BULLSHITTTTT!!!!!!!!!!!!</h1>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>REMARK</th>
+            <th>CREATEDTIME</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="goods : ${list}">
+            <td th:text="${goods.id}"></td>
+            <td th:text="${goods.name}"></td>
+            <td th:text="${goods.remark}"></td>
+            <td th:text="${goods.createdTime}"></td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
