@@ -1,12 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>DDD</title>
 </head>
 <body>
     <h1>
-        The [[${viewName}]] Page nnnn
+        CITIES
     </h1>
+    <ul>
+        <li th:each=" C : ${list}" th:text="${C}"></li>
+    </ul>
+
+<select name="cities">
+    <option th:each=" C : ${list}" th:text="${C}"></option>
+</select>
 </body>
 </html>
