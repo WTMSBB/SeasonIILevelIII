@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>GoodsUI</title>
+</head>
+<body>
+    <h1>THIS SCHOOL IS BULLSHITTTTT!!!!!!!</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>REMARK</th>
+                <th>CREATEDTIME</th>
+                <th>OPERATION</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr th:each="G : ${list}">
+                <td th:text="${G.id}">NO DATA</td>
+                <td th:text="${G.name}">NO DATA</td>
+                <td th:text="${G.remark}">NO DATA</td>
+                <td th:text="${#dates.format(G.createdTime,'yyyy/MM/dd HH:mm')}">NO DATA</td>
+                <td ><a th:href="@{/doDeleteByIds/{id}(id=${G.id})">DELETE</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
