@@ -14,12 +14,22 @@ public class GoodsServiceImpl implements GoodsService{
     private GoodsDao goodsDao;
 
     @Override
-    public List<Goods> findGoods() {
-        return goodsDao.findGoods();
+    public List<Goods> findGoods(String name) {
+        return goodsDao.findGoods(name);
     }
 
     @Override
-    public int deleteByIds(Integer... ids) {
-        return goodsDao.deleteByIds(ids);
+    public int deleteById(Integer id) {
+        return goodsDao.deleteById(id);
+    }
+
+    @Override
+    public void updateGoodsById(Integer id, String name, String remark) {
+
+    }
+
+    @Override
+    public void insertGoods(Integer id, String name, String remark) {
+
     }
 }

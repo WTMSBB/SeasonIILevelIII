@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>GoodsUI</title>
 </head>
 <body>
     <h1>THIS SCHOOL IS BULLSHITTTTT!!!!!!!</h1>
+    <form>
+        <input type="text" name="name">
+        <input type="button" value="SEARCH" onclick="doQueryGoods()">
+        <input type="button" value="ADD" onclick="doAddUI()">
+    </form>
     <table>
         <thead>
             <tr>
@@ -23,10 +28,27 @@
                 <td th:text="${G.name}">NO DATA</td>
                 <td th:text="${G.remark}">NO DATA</td>
                 <td th:text="${#dates.format(G.createdTime,'yyyy/MM/dd HH:mm')}">NO DATA</td>
-                <td ><a th:href="@{/doDeleteByIds/{id}(id=${G.id})">DELETE</a></td>
+                <td >
+                    <button type="button" th:onclick="doDeleteById([[${G.id}]])">DELETE</button>
+                    <button type="button">UPDATE</button>
+                </td>
             </tr>
         </tbody>
     </table>
+    <script>
+        function doAddUI() {
+            location.href=`http://localhost:1919/doAddUI`;
+        }
 
+        function doQueryGoods() {
+            let name = document.forms[0].name.value;
+            location.href=`http://localhost:1919/doFindGoods/${name}`;
+        }
+
+        function doDeleteById(id) {
+            console.log("--doDeleteByIds()--")
+            location.href=`http://localhost:1919/doDeleteById/${id}`;
+        }
+    </script>
 </body>
 </html>
