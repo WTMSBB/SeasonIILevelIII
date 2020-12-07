@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<style>
+    ul>li {
+        list-style-type: none;
+    }
+    .head{
+        color: aqua;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <h1 class="head">The Goods Update page.</h1>
+    <form th:action="@{/updateGoods}" method="post">
+        <input type="hidden" name="id" th:value="${goods.id}">
+        <ul>
+            <li>NAME</li>
+            <li><input type="text" name="name" th:value="${goods.name}"></li>
+            <li>REMARK</li>
+            <li><textarea name="remark" rows="5" cols="50" th:text="${goods.remark}"></textarea></li>
+            <li><input type="submit" value="SAVE"></li>
+        </ul>
+        <button onclick="doBack()">BACK</button>
+    </form>
+</div>
+</body>
+<script>
+    function doBack() {
+        location.href=`http://localhost:1919/doFindGoods/`;
+    }
+</script>
+</html>

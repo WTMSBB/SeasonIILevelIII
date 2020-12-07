@@ -24,12 +24,18 @@ public class GoodsServiceImpl implements GoodsService{
     }
 
     @Override
-    public void updateGoodsById(Integer id, String name, String remark) {
-
+    public void insertGoods(Goods goods) {
+        goodsDao.insertGoods(goods);
     }
 
     @Override
-    public void insertGoods(Integer id, String name, String remark) {
-
+    public void updateGoods(Goods goods) {
+        goodsDao.updateGoods(goods);
     }
+
+    @Override
+    public Goods findById(Integer id) {
+        return goodsDao.findById(id);
+    }
+
 }

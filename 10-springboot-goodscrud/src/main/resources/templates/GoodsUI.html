@@ -30,12 +30,16 @@
                 <td th:text="${#dates.format(G.createdTime,'yyyy/MM/dd HH:mm')}">NO DATA</td>
                 <td >
                     <button type="button" th:onclick="doDeleteById([[${G.id}]])">DELETE</button>
-                    <button type="button">UPDATE</button>
+                    <button type="button" th:onclick="doFindById([[${G.id}]])">UPDATE</button>
                 </td>
             </tr>
         </tbody>
     </table>
     <script>
+        function doFindById(id) {
+            location.href=`http://localhost:1919/doFindById/${id}`;
+        }
+
         function doAddUI() {
             location.href=`http://localhost:1919/doAddUI`;
         }
@@ -46,7 +50,6 @@
         }
 
         function doDeleteById(id) {
-            console.log("--doDeleteByIds()--")
             location.href=`http://localhost:1919/doDeleteById/${id}`;
         }
     </script>

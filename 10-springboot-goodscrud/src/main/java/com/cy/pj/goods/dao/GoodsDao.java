@@ -1,8 +1,7 @@
 package com.cy.pj.goods.dao;
 
 import com.cy.pj.goods.pojo.Goods;
-import org.apache.ibatis.annotations.Delete;
-import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -14,8 +13,12 @@ public interface GoodsDao {
     @Delete("DELETE FROM tb_goods WHERE id=#{id}")
     int deleteById(Integer id);
 
-    void updateGoodsById(Integer id,String name,String remark);
+    @Insert("INSERT INTO tb_goods (name,remark,createdTime) VALUES(#{name},#{remark},now())")
+    void insertGoods(Goods goods);
 
-    void insertGoods(Integer id,String name,String remark);
+    @Select("SELECT * FROM tb_goods WHERE id=#{id}")
+    Goods findById(Integer id);
 
+    @Update("UPDATE tb_goods SET name=#{name},remark=#{remark} WHERE id=#{id}")
+    void updateGoods(Goods goods);
 }

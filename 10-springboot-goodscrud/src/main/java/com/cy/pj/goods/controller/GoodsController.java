@@ -45,4 +45,27 @@ public class GoodsController {
         return "Goods-Add";
     }
 
+    @RequestMapping("insertGoods")
+    public String insertGoods(Goods goods,Model model){
+        goodsService.insertGoods(goods);
+        List<Goods> list = goodsService.findGoods(null);
+        model.addAttribute("list",list);
+        return "GoodsUI";
+    }
+
+    @RequestMapping("updateGoods")
+    public String updateGoods(Goods goods,Model model){
+        goodsService.updateGoods(goods);
+        List<Goods> list = goodsService.findGoods(null);
+        model.addAttribute("list",list);
+        return "GoodsUI";
+    }
+
+    @RequestMapping("doFindById/{id}")
+    public String doFindById(@PathVariable Integer id,Model model){
+        Goods goods = goodsService.findById(id);
+        model.addAttribute("goods",goods);
+        return "Goods-Update";
+    }
+
 }

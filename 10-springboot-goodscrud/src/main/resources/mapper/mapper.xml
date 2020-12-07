@@ -25,8 +25,5 @@
 <!--            or 1=2-->
 <!--        </where>-->
 <!--    </delete>-->
-    
-    <update id="updateGoods">
 
-    </update>
 </mapper>
