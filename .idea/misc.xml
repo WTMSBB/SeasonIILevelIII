@@ -8,6 +8,7 @@
       <list>
         <option value="$PROJECT_DIR$/09-springboot-webmvc/pom.xml" />
         <option value="$PROJECT_DIR$/10-springboot-goodscrud/pom.xml" />
+        <option value="$PROJECT_DIR$/12-springboot-response/pom.xml" />
       </list>
     </option>
   </component>
